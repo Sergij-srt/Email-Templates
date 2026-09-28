@@ -62,7 +62,7 @@ Open rate
 - Added a preheader. Without one, most inboxes show the first line of the body.
 
 Click rate
-- Shorter: about 290 words, down from about 480. The link now appears about 60% of the way down instead of at the very end.
+- Shorter: about 270 words, down from about 480. The link now appears about 60% of the way down instead of at the very end.
 - The link shows up twice: once as the main CTA with an arrow and a clear label, and again in the P.S., which is often the most-read line after the first sentence.
 - One goal (watch the tour), with "reply ROUTING" kept as a low-effort secondary action. Replies also help deliverability.
 - The 60/30/10 split is now a skimmable list instead of a dense paragraph.
