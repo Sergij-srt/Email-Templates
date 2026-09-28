@@ -1,0 +1,79 @@
+EMAIL 2 — FOLLOW-UP FOR OPENERS
+Audience: contacts who opened Email 1
+Format: plain text (reads as a personal note, lands in Primary more often than designed HTML)
+Send: 3–4 days after Email 1, Tue–Thu, 7–9am in the recipient's time zone
+
+====================================================================
+SUBJECT LINES (A/B test; keep the original as the control)
+====================================================================
+
+A: Cost per token is the wrong metric
+B: {{FirstName}}, a question about your AI bill
+C (control): Your most expensive AI model should do the least work
+
+PREVIEW TEXT (preheader):
+Frontier-only AI is the new over-provisioned cloud. Here's the 60/30/10 fix.
+
+====================================================================
+BODY
+====================================================================
+
+Hi {{FirstName}},
+
+If your CFO found every cloud workload running on the most expensive instance available, how long would that last?
+
+About a day.
+
+Yet that's how many companies run AI. Summaries, extraction, classification, translation and agent loops all go through premium frontier models because those models are available, not because the task needs them.
+
+At scale this gets expensive fast. Menlo Ventures estimates enterprise GenAI spend reached $37B in 2025, 3.2x the year before. Agents multiply it: one business action can trigger hundreds of model calls.
+
+The fix is model routing, which is really AI FinOps:
+
+- ~60% everyday work → smaller or open-weight models
+- ~30% business-critical → the best cost-performance model that meets your control threshold
+- ~10% high-stakes → frontier models
+
+Your mix will differ. The principle won't. For suitable workloads, costs can drop 70–90%.
+
+And the board metric isn't cost per million tokens. It's cost per correct business outcome.
+
+I've had close access across the major US, European and Asian AI labs, and I'm not paid to defend any one model family. I filmed what I saw inside the Chinese labs, including how they design for cost from day one:
+
+→ Watch the China AI Tour: https://www.youtube.com/playlist?list=PLe9FR2buoEnM
+
+If this is a board-level conversation for you, just reply "ROUTING".
+
+Danilo
+
+P.S. In August, Reuters reported that one DeepSeek flagship variant was more than 100x cheaper to run on benchmark tests than one Anthropic model. That's not a reason to switch vendors. It's a sign that frontier-only architecture is getting hard to defend. The tour covers what's behind that gap: https://www.youtube.com/playlist?list=PLe9FR2buoEnM
+
+--
+Danilo McGarry
+danilomcgarry.com
+Unit 182, 54 Bloomfield Avenue, Belfast, Northern Ireland
+
+====================================================================
+WHAT CHANGED AND WHY (internal notes, do not send)
+====================================================================
+
+Open rate
+- Two new subject lines to test against the original. A is short (33 chars) and challenges an assumption. B is personalised and reads like a 1:1 email. Both fit mobile inboxes without truncating.
+- Added a preheader. Without one, most inboxes show the first line of the body.
+
+Click rate
+- Shorter: about 290 words, down from about 480. The link now appears about 60% of the way down instead of at the very end.
+- The link shows up twice: once as the main CTA with an arrow and a clear label, and again in the P.S., which is often the most-read line after the first sentence.
+- One goal (watch the tour), with "reply ROUTING" kept as a low-effort secondary action. Replies also help deliverability.
+- The 60/30/10 split is now a skimmable list instead of a dense paragraph.
+- The opening question gets the reader to answer it in their head, which pulls them into the second line.
+
+Cut to save length (can go into Email 3)
+- The Linux Foundation stats (63% using open models; 89% with open source in their AI infrastructure).
+- "A cheap model that thinks ten times longer... can be expensive." This is a good hook for the next email.
+
+Check before sending
+- The playlist URL looks truncated. YouTube playlist IDs are usually about 34 characters. Paste the full URL.
+- Linking to one strong episode usually gets more clicks than a playlist. Consider swapping it in.
+- Find and link the Reuters DeepSeek-vs-Anthropic article so the claim has a source.
+- If you send HTML instead, turn the URL into link text ("Watch the China AI Tour") and add UTM tags, e.g. ?utm_source=email&utm_campaign=routing_e2.
