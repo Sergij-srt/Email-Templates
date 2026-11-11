@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="x-apple-disable-message-reformatting">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
 <title>The customer who gave up without telling you</title>
 <!--[if mso]>
 <noscript><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
@@ -22,9 +22,9 @@ table{border-collapse:collapse;}
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <!--<![endif]-->
 <style>
-/* Only rules that cannot be inlined live here: resets, mobile breakpoint, dark mode.
-   Light theme by default; readers in dark mode get the original dark palette. */
-:root{color-scheme:light dark;supported-color-schemes:light dark;}
+/* Only rules that cannot be inlined live here: resets and the mobile breakpoint.
+   Light only: the email stays white even when the reader's device is in dark mode. */
+:root{color-scheme:light only;supported-color-schemes:light only;}
 html,body{margin:0 !important;padding:0 !important;width:100% !important;}
 body,table,td,a,p,h1,h2{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 table,td{mso-table-lspace:0pt;mso-table-rspace:0pt;}
@@ -48,27 +48,6 @@ u + .body .addr a{color:inherit !important;text-decoration:none !important;}
   .card-in{padding:26px 20px 20px 20px !important;}
   .logo{width:210px !important;height:117px !important;}
 }
-@media (prefers-color-scheme:dark){
-  .bg-page{background-color:#151617 !important;}
-  .bg-card{background-color:#1D1E20 !important;}
-  .bg-hero{background-color:#323232 !important;}
-  .bg-soft{background-color:#323232 !important;}
-  .tx-head{color:#FFFFFF !important;}
-  .tx-body{color:#E4E5E7 !important;}
-  .tx-mute{color:#B4B6BB !important;}
-  .tx-acc{color:#FF6D6D !important;border-color:#FF6D6D !important;}
-  .tx-link{color:#FF8A8A !important;}
-  .bd{border-color:#45474B !important;}
-}
-[data-ogsc] .tx-head{color:#FFFFFF !important;}
-[data-ogsc] .tx-body{color:#E4E5E7 !important;}
-[data-ogsc] .tx-mute{color:#B4B6BB !important;}
-[data-ogsc] .tx-acc{color:#FF6D6D !important;border-color:#FF6D6D !important;}
-[data-ogsc] .tx-link{color:#FF8A8A !important;}
-[data-ogsb] .bg-page{background-color:#151617 !important;}
-[data-ogsb] .bg-card{background-color:#1D1E20 !important;}
-[data-ogsb] .bg-hero{background-color:#323232 !important;}
-[data-ogsb] .bg-soft{background-color:#323232 !important;}
 </style>
 </head>
 <body class="body bg-page" style="margin:0;padding:0;width:100%;background-color:#F5F3F2;word-spacing:normal;">
