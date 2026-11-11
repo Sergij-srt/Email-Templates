@@ -43,9 +43,6 @@ u + .body .addr a{color:inherit !important;text-decoration:none !important;}
   .eq{height:auto !important;}
   .panel{padding:30px 22px !important;}
   .card-in{padding:24px 20px !important;}
-  .stack{display:block !important;width:100% !important;}
-  .face-cell{padding:0 0 22px 0 !important;}
-  .face-lg{width:132px !important;height:164px !important;}
 }
 @media (prefers-color-scheme:dark){
   .bg-page{background-color:#101112 !important;}
@@ -103,28 +100,25 @@ u + .body .addr a{color:inherit !important;text-decoration:none !important;}
     <td class="r-top" height="6" bgcolor="#FF4200" style="height:6px;background-color:#FF4200;background-image:linear-gradient(90deg,#FF6D6D 0%,#FF4200 100%);border-radius:16px 16px 0 0;font-size:0;line-height:0;">&nbsp;</td>
   </tr>
 
-  <!-- Header: Danilo McGarry brand (white stays white in forced dark mode) -->
+  <!-- Header: Danilo's photo + AiMcGarry logo (white stays white in forced dark mode) -->
   <tr>
-    <td class="px" bgcolor="#FFFFFF" style="padding:20px 40px 20px 40px;background-color:#FFFFFF;background-image:linear-gradient(#FFFFFF,#FFFFFF);">
-      <a href="https://danilomcgarry.com/" target="_blank" style="text-decoration:none;display:inline-block;">
-        <img src="https://files.leadconnectorhq.com/file/67b348be2aa0e9acc0f0651c/logo-jpeg.jpg" width="164" height="44" alt="Danilo McGarry" style="display:block;width:164px;height:44px;border:0;font-family:'Poppins','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height:44px;font-weight:700;color:#1D1E20;">
-      </a>
+    <td class="px" bgcolor="#FFFFFF" style="padding:18px 40px 18px 40px;background-color:#FFFFFF;background-image:linear-gradient(#FFFFFF,#FFFFFF);">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td valign="middle" style="vertical-align:middle;padding:0 16px 0 0;"><a href="https://danilomcgarry.com/" target="_blank" style="text-decoration:none;display:block;"><img src="https://images.leadconnectorhq.com/image/f_jpg/q_80/r_480/u_https://files.leadconnectorhq.com/file/6af482f0512d2edab6a04e58/danilo.png" width="56" height="70" alt="Danilo McGarry" style="display:block;width:56px;height:70px;border:2px solid #FF6D6D;border-radius:12px;font-family:'Poppins','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:16px;color:#1D1E20;"></a></td>
+          <td valign="middle" width="1" bgcolor="#E5E7EB" style="width:1px;background-color:#E5E7EB;font-size:0;line-height:0;">&nbsp;</td>
+          <td valign="middle" style="vertical-align:middle;padding:0 0 0 16px;"><a href="https://danilomcgarry.com/" target="_blank" style="text-decoration:none;display:block;"><img src="https://files.leadconnectorhq.com/file/67b348be2aa0e9acc0f0651c/logo-jpeg.jpg" width="150" height="40" alt="AiMcGarry" style="display:block;width:150px;height:40px;border:0;font-family:'Poppins','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:40px;font-weight:700;color:#1D1E20;"></a></td>
+        </tr>
+      </table>
     </td>
   </tr>
 
-  <!-- Hero: Danilo's photo beside the greeting and headline (stacks on mobile) -->
+  <!-- Hero: greeting, sponsor tag, headline -->
   <tr>
     <td class="px bg-hero" bgcolor="#1D1E20" style="padding:36px 40px 40px 40px;background-color:#1D1E20;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td class="stack face-cell" width="196" valign="middle" style="width:196px;vertical-align:middle;padding:0 26px 0 0;"><img class="face-lg" src="https://images.leadconnectorhq.com/image/f_jpg/q_80/r_480/u_https://files.leadconnectorhq.com/file/6af482f0512d2edab6a04e58/danilo.png" width="170" height="211" alt="Danilo McGarry" style="display:block;width:170px;height:211px;border-radius:18px;"></td>
-          <td class="stack" valign="middle" style="vertical-align:middle;">
-            <p style="margin:0 0 14px 0;font-family:'Quicksand','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:28px;font-weight:600;color:#FFFFFF;">Hi {{contact.first_name}},</p>
-            <p style="margin:0 0 18px 0;font-family:'Poppins','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:18px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#FFFFFF;"><span aria-hidden="true" style="color:#FF4200;font-size:14px;line-height:18px;">&#9679;&nbsp;</span><a href="https://www.quadient.com/en-gb" target="_blank" style="color:#FFFFFF;text-decoration:none;">Sponsored by <span style="text-decoration:underline;">Quadient</span></a></p>
-            <h1 class="h1" style="margin:0;font-family:'Poppins','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:27px;line-height:36px;font-weight:700;letter-spacing:-0.3px;color:#FFFFFF;">The email arrived.<br>The link worked.<br><span style="color:#FF6D6D;">The customer still gave up.</span></h1>
-          </td>
-        </tr>
-      </table>
+      <p style="margin:0 0 14px 0;font-family:'Quicksand','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;line-height:28px;font-weight:600;color:#FFFFFF;">Hi {{contact.first_name}},</p>
+      <p style="margin:0 0 18px 0;font-family:'Poppins','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;line-height:18px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#FFFFFF;"><span aria-hidden="true" style="color:#FF4200;font-size:14px;line-height:18px;">&#9679;&nbsp;</span><a href="https://www.quadient.com/en-gb" target="_blank" style="color:#FFFFFF;text-decoration:none;">Sponsored by <span style="text-decoration:underline;">Quadient</span></a></p>
+      <h1 class="h1" style="margin:0;font-family:'Poppins','Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:34px;line-height:44px;font-weight:700;letter-spacing:-0.3px;color:#FFFFFF;">The email arrived.<br>The link worked.<br><span style="color:#FF6D6D;">The customer still gave up.</span></h1>
     </td>
   </tr>
 
