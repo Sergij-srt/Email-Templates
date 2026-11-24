@@ -8,7 +8,7 @@ os.makedirs(OUT, exist_ok=True)
 IMG = "https://files.leadconnectorhq.com/file/6b0598838b5100b36ad2f813/crane-paperclip-ai-cost.jpg"
 PHOTO = "https://files.leadconnectorhq.com/file/6af482f0512d2edab6a04e58/danilo.png"
 LOGO = "https://files.leadconnectorhq.com/file/6afab85077a01e46221fed8c/aimcgarry-logo-small-png-yyv9edw34auzpq3l-1.png"
-ADDRESS = "Unit 182, 54 Bloomfield Avenue, Belfast, Northern Ireland"
+ADDRESS = "Unit 182, 54 Bloomfield Avenue, Belfast, Northern Ireland, BT5 5AD, United Kingdom"
 CRED = "Former Head of AI, Citigroup &amp; UnitedHealth Group"
 
 # ---- verbatim copy from the doc (do not edit) ----
@@ -58,7 +58,7 @@ GREETING = 'Hi{{#if contact.first_name}} <span style="text-transform:capitalize;
 
 
 def shell(title, preheader, body, bg):
-    pad = "&#847;&zwnj;&nbsp;" * 60
+    pad = "&#847;&zwnj;&nbsp;" * 20
     return f"""<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -97,10 +97,16 @@ def p(text, style):
     return f'<p style="margin:0 0 18px 0;{style}">{text}</p>'
 
 
+def compliance(muted, align):
+    return (f'Advertisement from Danilo McGarry, sent on behalf of Illimitato Limited.<br>{ADDRESS}<br>'
+            f'You can unsubscribe from these emails at any time: '
+            f'<a href="{{{{email.unsubscribe_link}}}}" target="_blank" style="color:{muted};text-decoration:underline;">Unsubscribe</a>')
+
+
 def footer(color, muted):
     return f"""
 <tr><td class="px" style="padding:22px 40px 34px 40px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:{muted};text-align:center;">
-Advertisement from Danilo McGarry. {ADDRESS}
+{compliance(muted, "center")}
 </td></tr>"""
 
 
@@ -234,7 +240,7 @@ def variant_b():
   </td></tr>
   <tr><td class="px" style="padding:0 24px;"><div style="border-top:1px solid #eeeeee;height:1px;line-height:1px;font-size:1px;">&nbsp;</div></td></tr>
   <tr><td class="px" style="padding:16px 24px 30px 24px;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#999999;">
-    Advertisement from Danilo McGarry. {ADDRESS}
+    {compliance("#999999", "left")}
   </td></tr>
 </table>
 </td></tr></table>"""
