@@ -21,9 +21,13 @@ IMG_BATTERY = ("https://assets.zyrosite.com/cdn-cgi/image/format=jpeg,width=1000
                "fox-k-series-hybrid-inverter-home-A1azyb8lJaIPGQgQ.jpg")
 
 
+# GHL trigger links (one per template). Each redirects to BASE_URL with
+# utm_campaign=crs_nov_all2&utm_content=t<n>, logs the click on the contact and can start a workflow.
+TRIGGER = {"1": "8gE9zdNJyzqYSQduUsKK", "2": "tmH3mypgSgyOgmJPZ84G", "3": "WvmaQRILseUTpA9kasCQ"}
+
+
 def link(variant, content):
-    return (f"{BASE_URL}?utm_source=ghl&amp;utm_medium=email&amp;utm_campaign=crs_nov_all2"
-            f"&amp;utm_content=t{variant}_{content}")
+    return "{{trigger_link.%s}}" % TRIGGER[variant]
 
 
 GREETING = "Hi {{contact.first_name}},"
