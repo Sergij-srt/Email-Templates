@@ -9,7 +9,7 @@ IMG = "https://files.leadconnectorhq.com/file/6b0598838b5100b36ad2f813/crane-pap
 PHOTO = "https://files.leadconnectorhq.com/file/6af482f0512d2edab6a04e58/danilo.png"
 LOGO = "https://files.leadconnectorhq.com/file/6afab85077a01e46221fed8c/aimcgarry-logo-small-png-yyv9edw34auzpq3l-1.png"
 ADDRESS = "Unit 182, 54 Bloomfield Avenue, Belfast, Northern Ireland, BT5 5AD, United Kingdom"
-CRED = "Former Head of AI, Citigroup &amp; UnitedHealth Group"
+CRED = "Former Head of AI Fortune 100 companies"
 
 # ---- verbatim copy from the doc (do not edit) ----
 TITLE = "Are you paying premium AI prices for routine work?"
