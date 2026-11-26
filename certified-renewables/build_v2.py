@@ -16,9 +16,9 @@ SITE = "https://certifiedrenewables.com/"
 
 IMG_HOME = ("https://assets.zyrosite.com/cdn-cgi/image/format=jpeg,width=1040,height=650,fit=crop,"
             "gravity=0.5x0.55,quality=80,metadata=none/Yg2WVpRW9bsOE2Kk/20250127_093104-mP42BqO4kRSwa2rj.jpg")
-IMG_BATTERY = ("https://assets.zyrosite.com/cdn-cgi/image/format=jpeg,width=560,height=700,fit=crop,"
-               "gravity=0.47x0.62,quality=80,metadata=none/Yg2WVpRW9bsOE2Kk/"
-               "whatsapp-image-2025-02-07-at-17.45.59-YbNqlqrwRLiQ7pGn.jpeg")
+IMG_BATTERY = ("https://assets.zyrosite.com/cdn-cgi/image/format=jpeg,width=1000,height=750,fit=crop,"
+               "gravity=0.5x0.5,quality=80,metadata=none/Yg2WVpRW9bsOE2Kk/"
+               "fox-k-series-hybrid-inverter-home-A1azyb8lJaIPGQgQ.jpg")
 
 
 def link(variant, content):
@@ -171,10 +171,7 @@ T2 = wrap("2 (B)", f"""<tr><td class="px" bgcolor="{DARK}" style="background-col
 <tr><td bgcolor="{GREEN}" height="6" style="height:6px;font-size:0;line-height:0;background-color:{GREEN};">&nbsp;</td></tr>
 <tr><td class="px" style="padding:30px 40px 4px 40px;">
 {p(GREETING, weight="bold", color=DARK)}{p(P1)}{p(P2)}</td></tr>
-<tr><td class="px" align="center" style="padding:4px 40px 22px 40px;">
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#F0F6F1" style="background-color:#F0F6F1;padding:14px;border-radius:8px;">
-{image(IMG_BATTERY, link("2", "photo"), "Home battery and inverter installed by Certified Renewables", 280, 350)}
-</td></tr></table></td></tr>
+<tr><td class="px" style="padding:4px 40px 22px 40px;">{image(IMG_BATTERY, link("2", "photo"), "Home battery storage and hybrid inverter for backup power", 520, 390)}</td></tr>
 <tr><td class="px" style="padding:0 40px 6px 40px;">{p(P3)}{p(P4)}</td></tr>
 <tr><td class="px" style="padding:4px 40px 30px 40px;">{button(link("2", "button_bottom"), radius=30)}</td></tr>
 <tr><td class="px" style="padding:0 40px 26px 40px;">{signoff()}</td></tr>
