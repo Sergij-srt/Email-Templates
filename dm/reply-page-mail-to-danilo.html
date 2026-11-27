@@ -1,0 +1,156 @@
+<!--
+  Danilo McGarry "reply" page - the tracked hop between an email CTA and a reply.
+  GHL page: funnel "AI Email Campaigns - Thank you page!" -> step "Mail to" (/mail-to-danilo).
+  Paste this whole file into ONE full-width Custom Code element and delete every other
+  section on the page (including the old "AI First Maker" header image).
+
+  GHL counts only http(s) clicks; mailto: is never counted. Email CTAs link here,
+  GHL records the click, and this page opens the reader's email app with the
+  keyword already in the subject.
+
+  Replies go TO hi@danilomcgarry.com (Danilo's inbox, as before) with a BCC to
+  danilo@mail.aifirstmaker.com - the campaign sender address, which GHL reads. The BCC copy
+  lands in GHL Conversations from the real sender, so the "Customer replied" workflow tags
+  the contact, creates the opportunity and sends Danilo a task + email notification.
+
+  URL:  <this page>?w=<KEYWORD>&c=<code>
+    w = TOKENOMICS | ROUTING | PRIVATE | ARCHITECTURE | GUIDE   (whitelist; anything else -> plain email)
+    c = which button in which email; for DM All #3 variant C, c=tok-e3-c-pick-<task>
+        pre-fills the chosen task in the email body.
+
+  Never redirects to a URL taken from the query string. No cookies, no analytics.
+-->
+<style>
+  :root{--ink:#1f1f1f;--grey:#4d4d4d;--burg:#8c263c;--burg-d:#6f1d2f;--bg:#f5f3ef;--line:#e6e0d8;--soft:#fbf0f2}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--grey);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+  .top{background:#fff;border-bottom:3px solid var(--burg)}
+  .top-in{max-width:560px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .logo img{height:38px;width:auto;display:block}
+  .site{font-size:13px;color:var(--grey);text-decoration:none}
+  .wrap{max-width:560px;margin:0 auto;padding:24px 18px 40px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 24px}
+  .who{display:flex;align-items:center;gap:14px;margin:0 0 20px;padding:0 0 18px;border-bottom:1px solid var(--line)}
+  .who img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:0 0 64px;background:#eee}
+  .who b{display:block;font:700 18px/1.25 Georgia,'Times New Roman',serif;color:var(--ink)}
+  .who span{display:block;font-size:13px;line-height:1.4;color:#777}
+  .eyebrow{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--burg)}
+  h1{margin:0 0 12px;font:400 27px/1.25 Georgia,'Times New Roman',serif;color:var(--ink)}
+  .lead{margin:0 0 16px;font-size:15px;line-height:1.65}
+  .pick{margin:0 0 18px;padding:12px 14px;border-left:3px solid var(--burg);background:var(--soft);font-size:14px;line-height:1.5;color:var(--ink)}
+  .pick[hidden]{display:none}
+  .kw{display:inline-block;padding:1px 7px;border-radius:4px;background:var(--soft);color:var(--burg);font-weight:700;letter-spacing:.06em}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:16px;border-radius:6px;
+       background:var(--burg);color:#fff;font:700 16px/1.2 Arial,Helvetica,sans-serif;text-decoration:none}
+  .btn:hover{background:var(--burg-d)}
+  .note{margin:12px 0 0;font-size:13px;line-height:1.5;color:#777;text-align:center}
+  .alt{margin:20px 0 0;padding:18px 0 0;border-top:1px solid var(--line)}
+  .alt p{margin:0 0 10px;font-size:13px;color:#777}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{flex:1 1 140px;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 12px;border-radius:6px;
+        border:1px solid var(--line);background:#faf8f5;color:var(--ink);font:600 13px/1.2 Arial,Helvetica,sans-serif;text-decoration:none;cursor:pointer}
+  .chip:hover{border-color:var(--burg)}
+  .foot{margin:22px 0 0;text-align:center;font-size:12px;line-height:1.6;color:#777}
+  .foot a{color:var(--grey)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);opacity:0;transition:.2s;background:var(--ink);color:#fff;padding:10px 16px;border-radius:6px;font-size:13px;pointer-events:none}
+  .toast.on{opacity:1}
+  @media (max-width:420px){h1{font-size:23px}.card{padding:22px 18px}}
+</style>
+<header class="top"><div class="top-in">
+  <a class="logo" href="https://danilomcgarry.com" rel="noopener"><img src="https://files.leadconnectorhq.com/file/6afab85077a01e46221fed8c/aimcgarry-logo-small-png-yyv9edw34auzpq3l-1.png" alt="AI McGarry"></a>
+  <a class="site" href="https://danilomcgarry.com" rel="noopener">danilomcgarry.com</a>
+</div></header>
+<main class="wrap">
+  <section class="card">
+    <div class="who">
+      <img src="https://files.leadconnectorhq.com/file/6af482f0512d2edab6a04e58/danilo.png" alt="Danilo McGarry">
+      <div><b>Danilo McGarry</b><span>Former Head of AI Fortune 100 companies</span></div>
+    </div>
+    <p class="eyebrow" id="eyebrow">Reply to Danilo</p>
+    <h1 id="title">Opening your email&hellip;</h1>
+    <p class="lead" id="lead">A new message to Danilo should open now. Add a line about your situation, then send.</p>
+    <p class="pick" id="pick" hidden></p>
+    <a class="btn" id="go" href="mailto:hi@danilomcgarry.com?bcc=danilo@mail.aifirstmaker.com">&#9993;&nbsp; Write to Danilo</a>
+    <p class="note">Danilo reads every reply himself and answers by email.</p>
+    <div class="alt">
+      <p>Email app didn&rsquo;t open? Write from your browser instead:</p>
+      <div class="chips" id="chips"></div>
+    </div>
+  </section>
+  <p class="foot"><a href="https://danilomcgarry.com" rel="noopener">danilomcgarry.com</a> &middot; Unit 182, 54 Bloomfield Avenue, Belfast, Northern Ireland, BT5 5AD</p>
+</main>
+<div class="toast" id="toast">Copied</div>
+<script>
+(function(){
+  var TO  = 'hi@danilomcgarry.com';            /* Danilo's inbox */
+  var BCC = 'danilo@mail.aifirstmaker.com';    /* GHL-tracked copy -> Customer replied workflow */
+  var q = new URLSearchParams(location.search);
+  var w = (q.get('w') || '').toUpperCase();
+  if (!/^(ROUTING|PRIVATE|TOKENOMICS|ARCHITECTURE|GUIDE)$/.test(w)) w = '';          /* whitelist only */
+  var c = (q.get('c') || '').toLowerCase();
+
+  /* Copy per campaign keyword. TOKENOMICS = DM "Email Campaign for All #3 November 2026". */
+  var COPY = {
+    TOKENOMICS: {
+      eyebrow: 'Reply to Danilo &middot; AI cost per task',
+      title: 'Which AI task is costing you more than it should?',
+      lead: 'Tell me the one task, in one sentence. I will reply with how I would measure its cost per successful task, and where a cheaper model would do the same job.',
+      ask: 'The task I would like to cost properly: '
+    }
+  };
+  /* DM All #3 variant C one-tap picker (c=tok-e3-c-pick-<key>). Whitelisted labels only. */
+  var PICKS = {
+    routing:   'Request sorting & triage',
+    contracts: 'Contract & document exceptions',
+    service:   'Customer service replies',
+    other:     ''
+  };
+  var m = c.match(/^tok-e3-c-pick-(routing|contracts|service|other)$/);
+  var pick = m ? m[1] : '';
+
+  var cp = COPY[w] || null;
+  var subject = w || 'Hello Danilo';
+  var body = '';
+  if (cp) {
+    body = (pick && PICKS[pick]) ? 'The task eating our AI budget: ' + PICKS[pick] + '\n\n' : cp.ask + '\n\n';
+  } else if (w) {
+    body = w + '\n\n';
+  }
+
+  var enc = encodeURIComponent;
+  var mailto  = 'mailto:' + TO + '?bcc=' + enc(BCC) + '&subject=' + enc(subject) + (body ? '&body=' + enc(body) : '');
+  var gmail   = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + enc(TO) + '&bcc=' + enc(BCC) + '&su=' + enc(subject) + '&body=' + enc(body);
+  var outlook = 'https://outlook.office.com/mail/deeplink/compose?to=' + enc(TO) + '&bcc=' + enc(BCC) + '&subject=' + enc(subject) + '&body=' + enc(body);
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(ch){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]; }); };
+
+  if (cp) {
+    $('eyebrow').innerHTML = cp.eyebrow;
+    $('title').textContent = cp.title;
+    $('lead').textContent = cp.lead;
+  } else if (w) {
+    $('lead').innerHTML = 'A new message to Danilo with <span class="kw">' + esc(w) + '</span> in the subject should open now. Add a line about your situation, then send.';
+  }
+  if (pick && PICKS[pick]) {
+    $('pick').hidden = false;
+    $('pick').innerHTML = 'You picked: <b>' + esc(PICKS[pick]) + '</b>. It is already in your email &mdash; add one line about how you use it today.';
+  } else if (pick === 'other') {
+    $('pick').hidden = false;
+    $('pick').textContent = 'You picked another task. Name it in your email, one sentence is enough.';
+  }
+
+  $('go').href = mailto;
+  $('chips').innerHTML =
+      '<a class="chip" target="_blank" rel="noopener" href="' + gmail + '">Open in Gmail</a>'
+    + '<a class="chip" target="_blank" rel="noopener" href="' + outlook + '">Open in Outlook</a>'
+    + '<a class="chip" href="#" data-copy="' + TO + '">Copy address</a>';
+  setTimeout(function(){ location.href = mailto; }, 600);
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-copy]'); if (!t) return; e.preventDefault();
+    var v = t.getAttribute('data-copy');
+    (navigator.clipboard ? navigator.clipboard.writeText(v) : Promise.reject()).then(function(){
+      $('toast').textContent = 'Copied: ' + v; $('toast').classList.add('on'); setTimeout(function(){ $('toast').classList.remove('on'); }, 1600);
+    }, function(){ prompt('Copy this:', v); });
+  });
+})();
+</script>
